@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Copy Code Buttons</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    .button-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Click to Copy Code</h1>
+
+  <div class="button-container">
+    <button onclick="copyCode('console.log(`Code 1`);')">Copy Code 1</button>
+    <button onclick="copyCode('console.log(`Code 2`);')">Copy Code 2</button>
+    <button onclick="copyCode('console.log(`Code 3`);')">Copy Code 3</button>
+    <button onclick="copyCode('console.log(`Code 4`);')">Copy Code 4</button>
+    <button onclick="copyCode('console.log(`Code 5`);')">Copy Code 5</button>
+    <button onclick="copyCode('console.log(`Code 6`);')">Copy Code 6</button>
+    <button onclick="copyCode('console.log(`Code 7`);')">Copy Code 7</button>
+    <button onclick="copyCode('console.log(`Code 8`);')">Copy Code 8</button>
+    <button onclick="copyCode('console.log(`Code 9`);')">Copy Code 9</button>
+    <button onclick="copyCode('console.log(`Code 10`);')">Copy Code 10</button>
+  </div>
+
+  <script>
+    function copyCode(code) {
+      navigator.clipboard.writeText(code)
+        .then(() => {
+          alert('Code copied to clipboard!');
+        })
+        .catch(err => {
+          console.error('Failed to copy: ', err);
+        });
+    }
+  </script>
+
+</body>
+</html>
